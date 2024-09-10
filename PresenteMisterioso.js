@@ -1,11 +1,11 @@
 document.getElementById("titulo").onclick = function() {
     this.style.color = "red";
 }
-/*
-document.getElementById("capitao").onmouseover = function() {
+
+document.getElementById("capitao").onclick = function() {
     alert("chana");
 }
-*/
+
 document.getElementById("botao").onmouseover = function() {
     let largura = window.innerWidth;
     let altura = window.innerHeight;
