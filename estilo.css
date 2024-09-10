@@ -47,6 +47,6 @@
     animation: agachamento 0.2s ease;
 }
 @keyframes agachamento{
-    0%{height: auto;}
-    100%{height: 50%;}
+    0%{height: 250px;}
+    100%{height: 125px;}
 }
