@@ -46,6 +46,7 @@
 
 .agachar{
     animation: agachamento 0.2s ease;
+    transform-origin: top;
 }
 @keyframes agachamento{
     0%{transform: scaleY(1);}
