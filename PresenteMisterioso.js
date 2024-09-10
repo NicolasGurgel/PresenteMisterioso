@@ -1,5 +1,9 @@
 document.getElementById("titulo").onclick = function() {
-    this.style.color = "red";
+    if(titulo.style.color === "blue"){
+        this.style.color = "red";
+    }else if(titulo.style.color === "red){
+             this.style.color = "blue";
+    }
 }
 
 document.getElementById("capitao").onclick = function() {
