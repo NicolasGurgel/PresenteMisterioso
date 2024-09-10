@@ -1,8 +1,6 @@
 document.getElementById("titulo").onclick = function() {
-    if(this.style.color === "blue"){
-        this.style.color = "red";
-    }else if(this.style.color === "red"){this.style.color = "blue"}
-    };
+    this.style.color = "red";
+};
 
 document.getElementById("capitao").onclick = function() {
     alert("Vou reprovar em calculo 2 socorro");
