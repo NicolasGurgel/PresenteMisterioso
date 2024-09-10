@@ -74,9 +74,3 @@ document.addEventListener("keydown", (event)=>{
         walkL();
     }
 });
-
-document.addEventListener("keydown", (event)=>{
-    if(event.code === 'KeyS'){
-        agachar();
-    }
-});
