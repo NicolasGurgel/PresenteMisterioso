@@ -1,13 +1,11 @@
-// Ao clicar no título, ele muda de cor
 document.getElementById("titulo").onclick = function() {
     this.style.color = "red";
 }
-
-// Quando passar o mouse sobre a imagem, exibe um alerta
+/*
 document.getElementById("capitao").onmouseover = function() {
     alert("chana");
 }
-
+*/
 document.getElementById("botao").onmouseover = function() {
     let largura = window.innerWidth;
     let altura = window.innerHeight;
