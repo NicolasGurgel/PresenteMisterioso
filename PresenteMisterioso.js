@@ -9,6 +9,11 @@ document.getElementById("titulo").onclick = function() {
     }
 };
 
+const segredo = document.getElementById("segredo");
+
+document.getElementById("subtitulo").onclick = function(){
+        segredo.style.color = "black";
+}
 
 document.getElementById("capitao").onclick = function() {
     alert("Vou reprovar em calculo 2 socorro");
