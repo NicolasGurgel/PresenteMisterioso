@@ -17,6 +17,7 @@
 
 #mario{
     position: absolute;
+    height: 250px;
     top: 200px;
     left: 400px;
     transition: left 0.3s ease;
