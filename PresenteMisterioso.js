@@ -5,7 +5,7 @@ document.getElementById("titulo").onclick = function() {
 
 // Quando passar o mouse sobre a imagem, exibe um alerta
 document.getElementById("capitao").onmouseover = function() {
-    alert("Filha da puta de Jong");
+    alert("chana");
 }
 
 document.getElementById("botao").onmouseover = function() {
