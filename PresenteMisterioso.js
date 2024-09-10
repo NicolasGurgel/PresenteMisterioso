@@ -5,5 +5,5 @@ document.getElementById("titulo").onclick = function() {
 
 // Quando passar o mouse sobre a imagem, exibe um alerta
 document.getElementById("capitao").onmouseover = function() {
-    alert("Talvez fudendo, talvez não!");
+    alert("Vc é ruim no vava");
 }
