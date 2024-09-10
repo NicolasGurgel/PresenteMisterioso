@@ -1,52 +1,82 @@
-#capitao{
-    width: 270px;
+document.getElementById("titulo").onclick = function() {
+    if (this.style.color === "rgb(0, 0, 255)") { 
+        this.style.color = "rgb(255, 0, 0)"; 
+    } else if (this.style.color === "rgb(255, 0, 0)") { 
+        this.style.color = "rgb(0, 0, 255)"; 
+    } else {
+        
+        this.style.color = "rgb(0, 0, 255)"; 
+    }
+};
+
+const segredo = document.getElementById("segredo");
+
+document.getElementById("subtitulo").onclick = function() {
+    const cor = window.getComputedStyle(segredo).color;
+    if (cor === "rgb(255, 255, 255)") { 
+        segredo.style.color = "rgb(0, 0, 0)"; 
+    } else if (cor === "rgb(0, 0, 0)") { 
+        segredo.style.color = "rgb(255, 255, 255)"; 
+    }
+};
+
+document.getElementById("capitao").onclick = function() {
+    alert("Vou reprovar em calculo 2 socorro");
 }
 
-.titulo1{
-    font-size: 40px;
-    color: blue;
+document.getElementById("botao").onmouseover = function() {
+    let largura = window.innerWidth;
+    let altura = window.innerHeight;
+    let x = Math.random() * (largura - this.offsetWidth);
+    let y = Math.random() * (altura - this.offsetHeight);
+    this.style.left = x + "px";
+    this.style.top = y + "px";
 }
 
-#segredo{
-    color: white;
+const mario = document.getElementById("mario");
+
+function jump(){
+    mario.classList.add("jump");
+    setTimeout(function(){
+        mario.classList.remove("jump");
+    }, 500);
 }
 
-#botao{
-    position:absolute;
+function walkR(){
+    let atual = parseInt(window.getComputedStyle(mario).left, 10);
+    mario.classList.remove("faceL");
+    mario.classList.add("faceR");
+    mario.style.left = (atual+50) + "px";
+    
 }
 
-#mario{
-    position: absolute;
-    height: 250px;
-    top: 200px;
-    left: 400px;
-    transition: left 0.3s ease;
-
+function walkL(){
+    let atual = parseInt(window.getComputedStyle(mario).left, 10);
+    mario.classList.remove("faceR");
+    mario.classList.add("faceL");
+    mario.style.left = (atual-50) + "px";
+    
 }
 
-.faceR{
-    transform: scaleX(1);
-    transition: none;
+function agachar(){
+    mario.classList.add("agachar");
+    setTimeout(function(){
+        mario.classList.remove("agachar");
+    }, 200);
 }
 
-.faceL{
-    transform: scaleX(-1);
-    transition: none;
-}
+document.addEventListener("keydown", (event)=>{
+    if(event.code === 'Space'){
+        jump();
+    }else if(event.code === 'KeyD'){
+        walkR();
+    }else if(event.code === 'KeyA'){
+        walkL();
+    }
+});
 
-.jump{
-    animation: pulo 0.5s ease-out;
-}
-@keyframes pulo {
-    0%{top: 200px;}
-    50%{top: 50px;}
-    100%{top: 200px;}
-}
-
-.agachar{
-    animation: agachamento 0.2s ease;
-}
-@keyframes agachamento{
-    0%{height: auto;}
-    100%{height: 50%;}
-}
+document.addEventListener("keydown", (event)=>{
+    if(event.code === 'KeyS'){
+        agachar();
+    }
+});
