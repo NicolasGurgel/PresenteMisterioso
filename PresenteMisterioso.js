@@ -1,8 +1,7 @@
 document.getElementById("titulo").onclick = function() {
-    if(titulo.style.color === "blue"){
+    if(this.style.color === "blue"){
         this.style.color = "red";
-    }else if(titulo.style.color === "red){
-             this.style.color = "blue";
+    }else if(this.style.color === "red"){this.style.color = "blue"}
     }
 }
 
