@@ -1,8 +1,11 @@
 document.getElementById("titulo").onclick = function() {
-    if (this.style.color === "blue") {
-        this.style.color = "red";
-    } else if (this.style.color === "red") {
-        this.style.color = "blue";
+    if (this.style.color === "rgb(0, 0, 255)") { 
+        this.style.color = "rgb(255, 0, 0)"; 
+    } else if (this.style.color === "rgb(255, 0, 0)") { 
+        this.style.color = "rgb(0, 0, 255)"; 
+    } else {
+        
+        this.style.color = "rgb(0, 0, 255)"; 
     }
 };
 
