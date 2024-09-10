@@ -12,10 +12,10 @@ document.getElementById("titulo").onclick = function() {
 const segredo = document.getElementById("segredo");
 
 document.getElementById("subtitulo").onclick = function(){
-        if(segredo.style.color === "rgb(0, 0, 0)"){
-            segredo.style.color = "rgb(255, 255, 255)";
-        }else if(segredo.style.color === "rgb(255, 255, 255)"){
-            segredo.style.color = "rgb(0, 0, 0)";
+        if(segredo.style.color === "white"){
+            segredo.style.color = "black";
+        }else if(segredo.style.color === "black"){
+            segredo.style.color = "white";
         }
 }
 
