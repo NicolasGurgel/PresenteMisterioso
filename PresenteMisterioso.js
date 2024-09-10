@@ -7,12 +7,16 @@ document.getElementById("titulo").onclick = function() {
         
         this.style.color = "rgb(0, 0, 255)"; 
     }
-};
+}
 
 const segredo = document.getElementById("segredo");
 
 document.getElementById("subtitulo").onclick = function(){
-        segredo.style.color = "black";
+        if(segredo.style.color === "rgb(0, 0, 0)"){
+            segredo.style.color = "rgb(255, 255, 255)";
+        }else if(segredo.style.color === "rgb(255, 255, 255)"){
+            segredo.style.color = "rgb(0, 0, 0)";
+        }
 }
 
 document.getElementById("capitao").onclick = function() {
