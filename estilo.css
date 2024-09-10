@@ -16,6 +16,18 @@
     position:absolute;
 }
 
+#troca{
+    position: absolute;
+    top: 0;
+    left: 900px;
+}
+
+#retroca{
+    position: absolute;
+    top: 0;
+    left: 900px;
+}
+
 #mario{
     position: absolute;
     height: 250px;

@@ -9,6 +9,16 @@ document.getElementById("titulo").onclick = function() {
     }
 };
 
+document.getElementById("troca").onclick = function(){
+    document.getElementById("original").style.display = "none";
+    document.getElementById("novo").style.display = "block";
+}
+
+document.getElementById("retroca").onclick = function(){
+    document.getElementById("novo").style.display = "none";
+    document.getElementById("original").style.display = "block";
+}
+
 const segredo = document.getElementById("segredo");
 
 document.getElementById("subtitulo").onclick = function() {
