@@ -7,17 +7,17 @@ document.getElementById("titulo").onclick = function() {
         
         this.style.color = "rgb(0, 0, 255)"; 
     }
-}
+};
 
 const segredo = document.getElementById("segredo");
 
-document.getElementById("subtitulo").onclick = function(){
-        if(segredo.style.color === "white"){
-            segredo.style.color = "black";
-        }else if(segredo.style.color === "black"){
-            segredo.style.color = "white";
-        }
-}
+document.getElementById("subtitulo").onclick = function() {
+    if (segredo.style.color === "rgb(255, 255, 255)") { 
+        segredo.style.color = "rgb(0, 0, 0)"; 
+    } else if (segredo.style.color === "rgb(0, 0, 0)") { 
+        segredo.style.color = "rgb(255, 255, 255)"; 
+    }
+};
 
 document.getElementById("capitao").onclick = function() {
     alert("Vou reprovar em calculo 2 socorro");
