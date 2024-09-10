@@ -46,9 +46,17 @@
 
 .agachar{
     animation: agachamento 0.2s ease;
-    transform-origin: top;
+    transform-origin: bottom;
 }
 @keyframes agachamento{
     0%{transform: scaleY(1);}
     100%{transform: scaleY(0.5);}
+}
+
+.faceR.agachar{
+    transform: scaleX(1) scaleY(0.5);
+}
+
+.faceL.agachar{
+    transform: scaleX(-1) scaleY(0.5);
 }

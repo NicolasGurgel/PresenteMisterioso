@@ -60,9 +60,10 @@ function walkL(){
 
 function agachar(){
     mario.classList.add("agachar");
-    setTimeout(function(){
-        mario.classList.remove("agachar");
-    }, 200);
+}
+
+function levantar(){
+    mario.classList.remove("agachar");
 }
 
 document.addEventListener("keydown", (event)=>{
@@ -72,5 +73,13 @@ document.addEventListener("keydown", (event)=>{
         walkR();
     }else if(event.code === 'KeyA'){
         walkL();
+    }else if(event.code === 'KeyS'){
+        agachar();
     }
 });
+
+document.addEventListener("keyup", (event)=>{
+    if(event.code === 'KeyS'){
+        levantar();
+    }
+})
