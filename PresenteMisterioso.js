@@ -7,3 +7,12 @@ document.getElementById("titulo").onclick = function() {
 document.getElementById("capitao").onmouseover = function() {
     alert("Filha da puta de Jong");
 }
+
+document.getElementById("botao").onmouseover = function() {
+    let largura = window.innerWidth;
+    let altura = window.innerHeight;
+    let x = Math.random() * (largura - this.offsetWidth);
+    let y = Math.random() * (altura - this.offsetHeight);
+    this.style.left = x + "px";
+    this.style.top = y + "px";
+}
