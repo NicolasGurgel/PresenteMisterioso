@@ -3,7 +3,7 @@ document.getElementById("titulo").onclick = function() {
 }
 
 document.getElementById("capitao").onclick = function() {
-    alert("chana");
+    alert("Vou reprovar em calculo 2 socorro");
 }
 
 document.getElementById("botao").onmouseover = function() {
