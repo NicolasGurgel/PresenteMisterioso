@@ -58,6 +58,13 @@ function walkL(){
     
 }
 
+function agachar(){
+    mario.classList.add("agachar");
+    setTimeout(function(){
+        mario.classList.remove("agachar");
+    }, 200);
+}
+
 document.addEventListener("keydown", (event)=>{
     if(event.code === 'Space'){
         jump();
@@ -65,5 +72,11 @@ document.addEventListener("keydown", (event)=>{
         walkR();
     }else if(event.code === 'KeyA'){
         walkL();
+    }
+});
+
+document.addEventListener("keydown", (event)=>{
+    if(event.code === 'KeyS'){
+        agachar();
     }
 });
