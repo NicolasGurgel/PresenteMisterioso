@@ -1,6 +1,24 @@
 document.getElementById("titulo").onclick = function() {
-    this.style.color = "red";
-}
+    if (this.style.color === "rgb(0, 0, 255)") { 
+        this.style.color = "rgb(255, 0, 0)"; 
+    } else if (this.style.color === "rgb(255, 0, 0)") { 
+        this.style.color = "rgb(0, 0, 255)"; 
+    } else {
+        
+        this.style.color = "rgb(0, 0, 255)"; 
+    }
+};
+
+const segredo = document.getElementById("segredo");
+
+document.getElementById("subtitulo").onclick = function() {
+    const cor = window.getComputedStyle(segredo).color;
+    if (cor === "rgb(255, 255, 255)") { 
+        segredo.style.color = "rgb(0, 0, 0)"; 
+    } else if (cor === "rgb(0, 0, 0)") { 
+        segredo.style.color = "rgb(255, 255, 255)"; 
+    }
+};
 
 document.getElementById("capitao").onclick = function() {
     alert("Vou reprovar em calculo 2 socorro");
@@ -40,6 +58,13 @@ function walkL(){
     
 }
 
+function agachar(){
+    mario.classList.add("agachar");
+    setTimeout(function(){
+        mario.classList.remove("agachar");
+    }, 200);
+}
+
 document.addEventListener("keydown", (event)=>{
     if(event.code === 'Space'){
         jump();
@@ -47,5 +72,11 @@ document.addEventListener("keydown", (event)=>{
         walkR();
     }else if(event.code === 'KeyA'){
         walkL();
+    }
+});
+
+document.addEventListener("keydown", (event)=>{
+    if(event.code === 'KeyS'){
+        agachar();
     }
 });
