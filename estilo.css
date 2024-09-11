@@ -28,6 +28,54 @@
     left: 900px;
 }
 
+.arrows img {
+    position: fixed;
+    width: 78px;
+    bottom: 140px;
+}
+
+.arrows.light img {
+    position: fixed;
+    width: 99px;
+    bottom: 128px;
+}
+
+.arrows.light .down {
+    left: 79px;
+}
+
+.arrows.light .up {
+    left: 159px;
+}
+
+.arrows.light .right {
+    left: 239px;
+}
+
+.arrows.light .left {
+    left: 0px;
+}
+
+.down{
+    position: fixed;
+    left: 88px;
+}
+
+.up{
+    position: fixed;
+    left: 168px;
+}
+
+.right{
+    position: fixed;
+    left: 248px;
+}
+
+.left{
+    position: fixed;
+    left: 9px;
+}
+
 #mario{
     position: absolute;
     height: 250px;

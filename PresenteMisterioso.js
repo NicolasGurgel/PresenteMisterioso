@@ -44,6 +44,10 @@ document.getElementById("botao").onmouseover = function() {
 }
 
 const mario = document.getElementById("mario");
+const left = document.getElementById("esq");
+const down = document.getElementById("baixo");
+const up = document.getElementById("cima");
+const right = document.getElementById("dir");
 
 function jump(){
     mario.classList.add("jump");
@@ -81,15 +85,28 @@ document.addEventListener("keydown", (event)=>{
         jump();
     }else if(event.code === 'KeyD'){
         walkR();
+        right.style.display = "block";
     }else if(event.code === 'KeyA'){
         walkL();
+        left.style.display = "block";
     }else if(event.code === 'KeyS'){
         agachar();
+        down.style.display = "block";
+    }else if(event.code === 'KeyW'){
+        up.style.display = "block";
     }
 });
 
 document.addEventListener("keyup", (event)=>{
-    if(event.code === 'KeyS'){
+    if(event.code === 'KeyD'){
+        right.style.display = "none";
+    }else if(event.code === 'KeyA'){
+        left.style.display = "none";
+    }else if(event.code === 'KeyS'){
         levantar();
+        down.style.display = "none";
+    } else if(event.code === 'KeyW'){
+        up.style.display = "none";
     }
 })
+
