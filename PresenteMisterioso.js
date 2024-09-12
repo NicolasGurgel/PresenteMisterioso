@@ -49,7 +49,6 @@ document.getElementById("botao").onmouseover = function() {
 
 const mario = document.getElementById("mario");
 mario.classList.add("faceR");
-let timer;
 let movdir = null;
 let movesq = null;
 const jumpsound = document.getElementById("jumpsound");
@@ -57,16 +56,6 @@ const left = document.getElementById("esq");
 const down = document.getElementById("baixo");
 const up = document.getElementById("cima");
 const right = document.getElementById("dir");
-
-/*function inatividade(){
-    clearTimeout(timer);
-    mario.id = "mario";
-    mario.src = "mario.gif";
-    timer = setTimeout(()=>{
-        mario.id = "parado";
-        mario.src = "parado.webp";
-    }, 500);
-}*/
 
 function jump(){
     if(!mario.classList.contains("jump")){
@@ -112,18 +101,15 @@ document.addEventListener("keydown", (event)=>{
         jump();
         mario.src="mario.gif";
         mario.id="andando";
-        /*inatividade();*/
     }else if(event.code === 'KeyD' && !movdir){
         mario.src="mario.gif";
         mario.id="andando";
         movdir = setInterval(walkR, 50);
-        /*inatividade();*/
         right.style.display = "block";
     }else if(event.code === 'KeyA' && !movesq){
         mario.src="mario.gif";
         mario.id="andando";
         movesq = setInterval(walkL, 50);
-        /*inatividade();*/
         left.style.display = "block";
     }else if(event.code === 'KeyS'){
         agachar();
@@ -156,5 +142,3 @@ document.addEventListener("keyup", (event)=>{
         up.style.display = "none";
     }
 })
-
-/*inatividade();*/
