@@ -126,14 +126,18 @@ document.addEventListener("keydown", (event)=>{
 
 document.addEventListener("keyup", (event)=>{
     if(event.code === 'KeyD'){
-        mario.src="parado.webp";
-        mario.id="mario";
+        if(!movesq){
+            mario.src="parado.webp";
+            mario.id="mario";
+        }
         clearInterval(movdir);
         movdir=null;
         right.style.display = "none";
     }else if(event.code === 'KeyA'){
-        mario.src="parado.webp";
-        mario.id="mario";
+        if(!movdir){
+            mario.src="parado.webp";
+            mario.id="mario";
+        }
         clearInterval(movesq);
         movesq=null;
         left.style.display = "none";
