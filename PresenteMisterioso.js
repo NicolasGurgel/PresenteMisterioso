@@ -49,16 +49,21 @@ document.getElementById("botao").onmouseover = function() {
 
 const mario = document.getElementById("mario");
 mario.classList.add("faceR");
+const jumpsound = document.getElementById("jumpsound");
 const left = document.getElementById("esq");
 const down = document.getElementById("baixo");
 const up = document.getElementById("cima");
 const right = document.getElementById("dir");
 
 function jump(){
-    mario.classList.add("jump");
-    setTimeout(function(){
-        mario.classList.remove("jump");
-    }, 500);
+    if(!mario.classList.contains("jump")){
+        mario.classList.add("jump");
+        jumpsound.currentTime = 0;
+        jumpsound.play();
+        setTimeout(function(){
+            mario.classList.remove("jump");
+        }, 500);
+    }
 }
 
 function walkR(){
