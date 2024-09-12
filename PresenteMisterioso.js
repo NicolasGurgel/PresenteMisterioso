@@ -60,10 +60,14 @@ const right = document.getElementById("dir");
 function jump(){
     if(!mario.classList.contains("jump")){
         mario.classList.add("jump");
+        mario.src="mario.gif";
+        mario.id="andando";
         jumpsound.currentTime = 0;
         jumpsound.play();
         setTimeout(function(){
             mario.classList.remove("jump");
+            mario.src="parado.webp";
+            mario.id="mario";
         }, 500);
     }
 }
@@ -99,8 +103,6 @@ function levantar(){
 document.addEventListener("keydown", (event)=>{
     if(event.code === 'Space'){
         jump();
-        mario.src="mario.gif";
-        mario.id="andando";
     }else if(event.code === 'KeyD' && !movdir){
         mario.src="mario.gif";
         mario.id="andando";
