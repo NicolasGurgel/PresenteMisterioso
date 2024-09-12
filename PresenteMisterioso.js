@@ -66,8 +66,16 @@ function jump(){
         jumpsound.play();
         setTimeout(function(){
             mario.classList.remove("jump");
-            mario.src="parado.webp";
-            mario.id="mario";
+            if(movdir){
+                mario.src="mario.gif";
+                mario.id="andando";
+            }else if(movesq){
+                mario.src="mario.gif";
+                mario.id="andando";
+            }else{
+                mario.src="parado.webp";
+                mario.id="mario";
+            }
         }, 500);
     }
 }
@@ -147,4 +155,4 @@ document.addEventListener("keyup", (event)=>{
     } else if(event.code === 'KeyW'){
         up.style.display = "none";
     }
-})
+});
