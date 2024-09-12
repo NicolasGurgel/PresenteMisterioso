@@ -85,6 +85,15 @@
 
 }
 
+#parado{
+    position: absolute;
+    height: 225px;
+    bottom: 0;
+    left: 405px;
+    transition: left 0.3s ease;
+
+}
+
 .faceR{
     transform: scaleX(1);
 }

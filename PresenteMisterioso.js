@@ -49,11 +49,22 @@ document.getElementById("botao").onmouseover = function() {
 
 const mario = document.getElementById("mario");
 mario.classList.add("faceR");
+let timer;
 const jumpsound = document.getElementById("jumpsound");
 const left = document.getElementById("esq");
 const down = document.getElementById("baixo");
 const up = document.getElementById("cima");
 const right = document.getElementById("dir");
+
+function inatividade(){
+    clearTimeout(timer);
+    mario.id = "mario";
+    mario.src = "mario.gif";
+    timer = setTimeout(()=>{
+        mario.id = "parado";
+        mario.src = "parado.webp";
+    }, 500);
+}
 
 function jump(){
     if(!mario.classList.contains("jump")){
@@ -109,6 +120,9 @@ document.addEventListener("keydown", (event)=>{
     }else if(event.code === 'KeyW'){
         up.style.display = "block";
     }
+
+    inatividade();
+
 });
 
 document.addEventListener("keyup", (event)=>{
@@ -124,3 +138,4 @@ document.addEventListener("keyup", (event)=>{
     }
 })
 
+inatividade();
