@@ -50,13 +50,15 @@ document.getElementById("botao").onmouseover = function() {
 const mario = document.getElementById("mario");
 mario.classList.add("faceR");
 let timer;
+let movdir = null;
+let movesq = null;
 const jumpsound = document.getElementById("jumpsound");
 const left = document.getElementById("esq");
 const down = document.getElementById("baixo");
 const up = document.getElementById("cima");
 const right = document.getElementById("dir");
 
-function inatividade(){
+/*function inatividade(){
     clearTimeout(timer);
     mario.id = "mario";
     mario.src = "mario.gif";
@@ -64,7 +66,7 @@ function inatividade(){
         mario.id = "parado";
         mario.src = "parado.webp";
     }, 500);
-}
+}*/
 
 function jump(){
     if(!mario.classList.contains("jump")){
@@ -108,11 +110,20 @@ function levantar(){
 document.addEventListener("keydown", (event)=>{
     if(event.code === 'Space'){
         jump();
-    }else if(event.code === 'KeyD'){
-        walkR();
+        mario.src="mario.gif";
+        mario.id="andando";
+        /*inatividade();*/
+    }else if(event.code === 'KeyD' && !movdir){
+        mario.src="mario.gif";
+        mario.id="andando";
+        movdir = setInterval(walkR, 50);
+        /*inatividade();*/
         right.style.display = "block";
-    }else if(event.code === 'KeyA'){
-        walkL();
+    }else if(event.code === 'KeyA' && !movesq){
+        mario.src="mario.gif";
+        mario.id="andando";
+        movesq = setInterval(walkL, 50);
+        /*inatividade();*/
         left.style.display = "block";
     }else if(event.code === 'KeyS'){
         agachar();
@@ -121,14 +132,22 @@ document.addEventListener("keydown", (event)=>{
         up.style.display = "block";
     }
 
-    inatividade();
+    
 
 });
 
 document.addEventListener("keyup", (event)=>{
     if(event.code === 'KeyD'){
+        mario.src="parado.webp";
+        mario.id="mario";
+        clearInterval(movdir);
+        movdir=null;
         right.style.display = "none";
     }else if(event.code === 'KeyA'){
+        mario.src="parado.webp";
+        mario.id="mario";
+        clearInterval(movesq);
+        movesq=null;
         left.style.display = "none";
     }else if(event.code === 'KeyS'){
         levantar();
@@ -138,4 +157,4 @@ document.addEventListener("keyup", (event)=>{
     }
 })
 
-inatividade();
+/*inatividade();*/
