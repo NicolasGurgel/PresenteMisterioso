@@ -1,13 +1,17 @@
-document.getElementById("titulo").onclick = function() {
-    if (this.style.color === "rgb(0, 0, 255)") { 
-        this.style.color = "rgb(255, 0, 0)"; 
-    } else if (this.style.color === "rgb(255, 0, 0)") { 
-        this.style.color = "rgb(0, 0, 255)"; 
-    } else {
-        
-        this.style.color = "rgb(0, 0, 255)"; 
-    }
-};
+document.addEventListener("DOMContentLoaded", function(){
+    const titulo = document.getElementById("titulo");
+    let corAtual = "rgb(0, 0, 255)";
+
+    setInterval(function() {
+        if(corAtual === "rgb(0, 0, 255)"){
+            titulo.style.color = "rgb(255, 0, 0)";
+            corAtual = "rgb(255, 0, 0)";
+        }else{
+            titulo.style.color = "rgb(0, 0, 255)";
+            corAtual = "rgb(0, 0, 255)";
+        }
+    }, 245);
+})
 
 document.getElementById("troca").onclick = function(){
     document.getElementById("original").style.display = "none";
@@ -31,7 +35,7 @@ document.getElementById("subtitulo").onclick = function() {
 };
 
 document.getElementById("capitao").onclick = function() {
-    alert("Vou reprovar em calculo 2 socorro");
+    alert("vou me matar as 23:99");
 }
 
 document.getElementById("botao").onmouseover = function() {
@@ -44,6 +48,7 @@ document.getElementById("botao").onmouseover = function() {
 }
 
 const mario = document.getElementById("mario");
+mario.classList.add("faceR");
 const left = document.getElementById("esq");
 const down = document.getElementById("baixo");
 const up = document.getElementById("cima");
@@ -73,7 +78,11 @@ function walkL(){
 }
 
 function agachar(){
-    mario.classList.add("agachar");
+    if(mario.classList.contains("faceR") && !mario.classList.contains("agachar")){
+        mario.classList.add("agachar", "faceR");
+    }else if(mario.classList.contains("faceL") && !mario.classList.contains("agachar")){
+        mario.classList.add("agachar", "faceL");
+    }
 }
 
 function levantar(){
