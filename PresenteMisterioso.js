@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", function(){
     }, 245);
 })
 
+const cachorro = document.getElementById("cachorro");
 const sb = document.getElementById("sb");
-sb.style.height = window.innerHeight + "px";
-sb.style.width = window.innerWidth + "px";
+cachorro.style.height = window.innerHeight + "px";
+cachorro.style.width = window.innerWidth + "px";
 document.getElementById("jumpscare").onclick = function(){
+    document.getElementById("original").style.display = "none";
     sb.style.display = "block";
 }
 
