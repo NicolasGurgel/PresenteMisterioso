@@ -65,6 +65,7 @@ const left = document.getElementById("esq");
 const down = document.getElementById("baixo");
 const up = document.getElementById("cima");
 const right = document.getElementById("dir");
+const hanzo = document.getElementById("hanzo");
 
 function jump(){
     if(!mario.classList.contains("jump")){
@@ -135,6 +136,12 @@ document.addEventListener("keydown", (event)=>{
         down.style.display = "block";
     }else if(event.code === 'KeyW'){
         up.style.display = "block";
+    }else if(event.code === 'KeyQ'){
+        hanzo.classList.add("ult");
+
+        setTimeout(function(){
+            hanzo.classList.remove("ult");
+        }, 3000)
     }
 
     

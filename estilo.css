@@ -33,6 +33,22 @@
     top: 0;
 }
 
+#hanzo{
+    position: absolute;
+    height: 600px;
+    width: 900px;
+    top: 150px;
+    left: -900px;
+}
+
+.ult{
+    animation: ult 3s linear;
+}
+@keyframes ult {
+    0%{left: -900px;}
+    100%{left: 100%;}
+}
+
 .arrows img {
     position: fixed;
     width: 78px;
