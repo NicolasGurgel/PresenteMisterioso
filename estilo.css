@@ -29,6 +29,10 @@
     left: 900px;
 }
 
+#jumpscare{
+    top: 0;
+}
+
 .arrows img {
     position: fixed;
     width: 78px;
