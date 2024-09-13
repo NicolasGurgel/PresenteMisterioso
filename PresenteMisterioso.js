@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", function(){
     }, 245);
 })
 
+const sb = document.getElementById("sb");
+sb.style.height = window.innerHeight + "px";
+sb.style.width = window.innerWidth + "px";
+document.getElementById("jumpscare").onclick = function(){
+    sb.style.display = "block";
+}
+
 document.getElementById("troca").onclick = function(){
     document.getElementById("original").style.display = "none";
     document.getElementById("novo").style.display = "block";
