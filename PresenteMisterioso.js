@@ -137,11 +137,12 @@ document.addEventListener("keydown", (event)=>{
     }else if(event.code === 'KeyW'){
         up.style.display = "block";
     }else if(event.code === 'KeyQ'){
-        hanzo.classList.add("ult");
-
-        setTimeout(function(){
-            hanzo.classList.remove("ult");
-        }, 3000)
+        if(!hanzo.classList.contains("ult")){
+            hanzo.classList.add("ult");
+            setTimeout(function(){
+                hanzo.classList.remove("ult");
+            }, 3000);
+        }
     }
 
     
